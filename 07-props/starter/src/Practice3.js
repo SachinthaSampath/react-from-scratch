@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
 const Practice3 = () => {
-  const title = "Hello World";
-  const author = "Zac Gordon";
+  const title = 'Hello World';
+  const author = 'Zac Gordon';
   return (
     <div className="practice">
       {/* 
         1. Pass title and author into Post as props        
       */}
-      <Post />
+      <Post title={title} author={author} />
     </div>
   );
 };
@@ -18,9 +18,15 @@ const Practice3 = () => {
   3. Pass title to the Heading component as props
   4. Pass author to the Byline component as props
 */
-const Post = () => (
-  <article className="post">Add Header and Byline here</article>
-);
+const Post = (props) => {
+  console.log(props);
+
+  return (
+    <article className="post">
+      Add Header and Byline here {props.title} {props.author}
+    </article>
+  );
+};
 
 /*
   5. Create a component named <Heading /> that accepts props

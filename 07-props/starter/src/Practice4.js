@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 
 const Practice4 = () => {
   const user = {
     id: 1,
-    username: "zgordon",
-    firstName: "Zac",
-    lastName: "Gordon",
-    preferredName: "Zac",
-    url: "https://zacgordon.com",
-    twitter: "@zgordon"
+    username: 'zgordon',
+    firstName: 'Zac',
+    lastName: 'Gordon',
+    preferredName: 'Zac',
+    url: 'https://zacgordon.com',
+    twitter: '@zgordon',
   };
   return (
     <div className="practice">
       {/*         
         1. Spread the "user" object into User so each "user" property becomes it's own prop
       */}
-      <User />
+      <User {...user} />
     </div>
   );
 };
@@ -23,11 +23,11 @@ const Practice4 = () => {
 /*
   2. Destructure username and firstName from props
 */
-const User = props => {
+const User = (props) => {
   return (
     <div className="user">
-      <h1>Hi FIRSTNAME_HERE!</h1>
-      <p>Username: USERNAME_HERE</p>
+      <h1>Hi {props.firstName}!</h1>
+      <p>Username: {props.username}</p>
     </div>
   );
 };
