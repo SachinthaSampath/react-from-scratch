@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // default app
+      //   const App = () => {
+      //     return <h1>Hello World</h1>;
+      //   };
+
+      //   ReactDOM.render(<App />, document.getElementById('root'));
+
+      // Use JSX to create a paragraph element with text
+      const pE1 = <p>My first JSX code 1</p>; // native JSX element
+      const pE2 = React.createElement('p', {}, 'My first JSX code'); // native JSX element
+
+      console.log(pE1);
+
+      // after this line, we will render the paragraph element and it becomes a part of the DOM
+      ReactDOM.render(pE1, document.getElementById('root'));
+    </script>
+  </body>
+</html>
